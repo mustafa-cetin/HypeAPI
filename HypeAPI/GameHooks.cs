@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace HypeAPI
 {
@@ -8,5 +6,19 @@ namespace HypeAPI
     {
         public static event Action OnGameStart;
         public static event Action OnStealSomething;
+
+        public static void TriggerGameStart()
+        {
+            OnGameStart?.Invoke();
+        }
+
+        public static void TriggerStealSomething()
+        {
+            OnStealSomething?.Invoke();
+        }
+        public static void InvokeCustomEvent(Action eventAction)
+        {
+            eventAction?.Invoke();
+        }
     }
 }
