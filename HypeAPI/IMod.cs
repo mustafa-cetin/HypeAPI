@@ -6,6 +6,7 @@ namespace HypeAPI
 {
     public interface IMod
     {
+        public bool Enabled { get; set; }
         void OnEnable();
         void OnDisable();
     }
