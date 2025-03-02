@@ -9,5 +9,6 @@ namespace HypeAPI
         public bool Enabled { get; set; }
         void OnEnable();
         void OnDisable();
+        public void Initialize(ModAPI modApi);
     }
 }
